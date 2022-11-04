@@ -41,7 +41,16 @@
 <main>
     <section class="service-container">
         <h1 class="service-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="service-button" type="button">Замовити послугу</button>
+        <button class="service-button" data-modal-open type="button">Замовити послугу</button>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-button" data-modal-close>
+                    <svg height="18px" width="18px">
+                        <use href="./images/icons.svg#icon-cross"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </section>
     <section class="section">
         <div class="container">
@@ -49,7 +58,7 @@
             <ul class="section-list">
                 <li>
                     <div class="section-icon-container">
-                        <svg height="70px" width=" 70px">
+                        <svg height="70px" width="70px">
                             <use href="./images/icons.svg#icon-antenna"></use>
                         </svg>
                     </div>
@@ -91,9 +100,18 @@
         <div class="container">
             <h2 class="section-title">Чим ми займаємося</h2>
             <ul class="section-list">
-                <li><img alt="Наші роботи" src="images/our-works-1.jpg" width="370"></li>
-                <li><img alt="Наші роботи" src="images/our-works-2.jpg" width="370"></li>
-                <li><img alt="Наші роботи" src="images/our-works-3.jpg" width="370"></li>
+                <li class="section-link">
+                    <img alt="Наші роботи" src="images/our-works-1.jpg" width="370">
+                    <p class="section-subtitle">Десктопні додатки</p>
+                </li>
+                <li class="section-link">
+                    <img alt="Наші роботи" src="images/our-works-2.jpg" width="370">
+                    <p class="section-subtitle">Мобільні додатки</p>
+                </li>
+                <li class="section-link">
+                    <img alt="Наші роботи" src="images/our-works-3.jpg" width="370">
+                    <p class="section-subtitle">Дизайнерські рішення</p>
+                </li>
             </ul>
         </div>
     </section>
@@ -355,6 +373,7 @@
         </div>
     </div>
 </footer>
+<script src="./js/modal.js"></script>
 </body>
 </html>
 
