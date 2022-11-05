@@ -114,7 +114,7 @@ body {
 
 .nav-link:hover, .navLink:focus {
     color: var(--blue-main);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list {
@@ -126,7 +126,7 @@ body {
     display: flex;
     gap: 10px;
     color: var(--gray-substring);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list-item:hover, .contacts-list-item:focus {
@@ -134,11 +134,14 @@ body {
 }
 
 .contacts-icon {
-    align-self: center;
     fill: currentColor;
 }
 
 .contacts-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     font-weight: 500;
     color: currentColor;
 }
@@ -180,35 +183,39 @@ body {
     border-radius: 4px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     font-family: inherit;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-button:hover, .service-button:focus {
     background-color: var(--blue-active);
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
-.backdrop.is-hidden .modal{
-   transform: scale(1.1);
+
+.backdrop.is-hidden .modal {
+    transform: scale(1.1);
 }
-.backdrop{
+
+.backdrop {
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
-    width:100vw;
+    width: 100vw;
     height: 100vh;
     background-color: var(--transparent-gray-background);
     transform: scale(1);
+    transition-property: background-color, width, height;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal{
+
+.modal {
     position: relative;
     width: 528px;
     height: 581px;
@@ -216,9 +223,11 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: scale(1);
+    transition-property: background-color, width, height, box-shadow, border-radius;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button{
+
+.modal-button {
     position: absolute;
     right: 8px;
     top: 8px;
@@ -231,6 +240,7 @@ body {
     background-color: var(--white-main);
     border-radius: 15px;
 }
+
 .section-list {
     display: flex;
     gap: 30px;
@@ -238,7 +248,7 @@ body {
 
 .section-link {
     position: relative;
-   z-index: -1;
+    z-index: -1;
 }
 
 .section-subtitle {
@@ -296,7 +306,7 @@ body {
 }
 
 .card-info {
-    margin: 30px 0;
+    padding: 30px 0;
 }
 
 .card-company {
@@ -305,6 +315,7 @@ body {
     border: 1px solid var(--company-gray-border);
     border-radius: 4px;
     color: var(--company-gray-border);
+    transition-property: border, color;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -354,6 +365,7 @@ body {
     color: var(--company-gray-border);
     background-color: var(--white-main);
     gap: 10px;
+    transition-property: color, background-color;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -389,7 +401,10 @@ body {
 .footer-contacts {
     color: var(--white-opacity);
     line-height: 1.71;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-contacts-list:first-child .footer-contacts {
+    color: var(--white-main)
 }
 
 .footer-contacts-list:not(:last-child) {
@@ -404,9 +419,6 @@ body {
     font-style: normal;
 }
 
-.footer-contacts:hover, .footer-contacts:focus {
-    color: var(--white-main);
-}
 
 .follow-container {
     flex-direction: column;
@@ -437,7 +449,7 @@ body {
     border: none;
     color: var(--white-main);
     background-color: var(--gray-button-background);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .follow-button:hover, .follow-button:focus {
@@ -458,6 +470,7 @@ body {
     padding: 6px 22px;
     border-radius: 4px;
     border-style: none;
+    transition-property: color, background-color, box-shadow;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -500,7 +513,6 @@ body {
 }
 
 .project-modal {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     z-index: -1;
 }
@@ -513,6 +525,7 @@ body {
     position: absolute;
     background-color: var(--transparent-blue);
     transform: translateY(100%);
+    transition-property: background-color, width, height;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -524,6 +537,7 @@ body {
 
 .project-link {
     overflow: hidden;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:hover, .project-link:focus {
