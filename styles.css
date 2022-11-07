@@ -490,6 +490,7 @@ a:active, a:focus {
     transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .portfolio-button:hover, .portfolio-button:focus {
@@ -546,6 +547,14 @@ a:active, a:focus {
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.project-link{
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-link:hover, .project-link:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .project-link:hover .project-modal {
     transform: translateY(0);
@@ -564,9 +573,6 @@ a:active, a:focus {
     opacity: 1;
 }
 
-.project-link:hover, .project-link:focus {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .project-modal-info {
     position: absolute;
@@ -579,9 +585,9 @@ a:active, a:focus {
 
 .project-item {
     overflow: hidden;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.project-item:hover {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+/*.project-item:hover {*/
+/*    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);*/
+/*}*/
